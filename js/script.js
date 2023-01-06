@@ -19,5 +19,16 @@ if (navigator.serviceWorker) {
  * This function displays an alert.
  */
 function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+  var numA = parseFloat(document.getElementById("num-a").value)
+  var numB = parseFloat(document.getElementById("num-b").value)
+  var numC = parseFloat(document.getElementById("num-c").value)
+
+  var product = numC
+  var counter = 0
+
+  while (counter < Math.abs(numB)) {
+    counter++
+    product = product + Math.abs(numB)
+    document.getElementById("x-values").innerHTML += " x = " + counter + "</br>"
+    document.getElementById("y-values").innerHTML += " y = " + product + "</br>"
 }
