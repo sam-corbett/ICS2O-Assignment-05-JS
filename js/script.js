@@ -32,3 +32,4 @@ function myButtonClicked() {
     document.getElementById("x-values").innerHTML += " x = " + counter + "</br>"
     document.getElementById("y-values").innerHTML += " y = " + product + "</br>"
 }
+}
