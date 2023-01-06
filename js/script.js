@@ -31,5 +31,5 @@ function myButtonClicked() {
     product = product + Math.abs(numB)
     document.getElementById("x-values").innerHTML += " x = " + counter + "</br>"
     document.getElementById("y-values").innerHTML += " y = " + product + "</br>"
-}
+  }
 }
