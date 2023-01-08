@@ -4,11 +4,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Standard Form Parabola Calculator" />
+    <meta name="description" content="Equation Evaluator" />
     <meta name="keywords" content="mths, ics2o" />
     <meta name="author" content="sam-corbett" />
     <meta name="theme-color" content="#FFFFFF" />
-    <title>Standard Form Parabola Calculator</title>
+    <title>Equation Evaluator</title>
     <link rel="canonical" href="https://sam-corbett/ICS2O-Assignment-05-JS/" />
     <link rel="manifest" href="/ICS2O-Assignment-05-JS/manifest.webmanifest" />
     <link rel="stylesheet" href="./css/styles.css" />
@@ -42,7 +42,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   </head>
-  <title>Standard Form Parabola Calculator</title>
+  <title>Equation Evaluator</title>
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="./js/script.js"></script>
@@ -50,22 +50,24 @@
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
           <span class="mdl-layout-title"
-            >Standard Form Parabola Calculator</span
+            >Equation Evaluator</span
           >
         </div>
       </header>
       <main class="mdl-layout__content">
         <p></p>
         <h6>
-          This program represents a table of X and Y Values when given the
-          equation of a parabola in Standard Form (0= ax²+ bx + c).
+          This program preforms "While Loops", as it calculates one equation for multiplication and one for addition.
         </h6>
-        <img
-          src="./images/parabola-intro.png"
-          alt="Parabola"
-          width="600px"
-          height="375px"
-        />
+        <h6>
+          Although, the program doesn't just calculate numbers, it checks if both numbers equal the same number from each equation.
+        </h6>
+        <p></p>
+        <h6>
+          Enter any number in the textboxes, and make sure their equal from each other.
+        </h6>
+        <hr></hr>
+        <p>First, make an equation for <i>addition:</i></p>
         <!-- Numeric Textfield -->
         <form action="#">
           <div
@@ -75,14 +77,15 @@
               class="mdl-textfield__input"
               type="text"
               pattern="-?[0-9]*(\.[0-9]+)?"
-              id="num-a"
+              id="variable-addition-1"
             />
-            <label class="mdl-textfield__label" for="num-a"
-              >Enter Value A (ax²)</label
+            <label class="mdl-textfield__label" for="variable-addition-1"
+              >Enter Value 1</label
             >
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
         </form>
+        <h4>+</h4>
         <!-- Numeric Textfield -->
         <form action="#">
           <div
@@ -92,14 +95,18 @@
               class="mdl-textfield__input"
               type="text"
               pattern="-?[0-9]*(\.[0-9]+)?"
-              id="num-b"
+              id="variable-addition-2"
             />
-            <label class="mdl-textfield__label" for="num-b"
-              >Enter Value B (bx)</label
+            <label class="mdl-textfield__label" for="variable-addition-2"
+              >Enter Value 2</label
             >
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
         </form>
+        <p></p>
+        <hr>
+        <p></p>
+        <p>Next, make an equation for <i>multiplication:</i></p>
         <!-- Numeric Textfield -->
         <form action="#">
           <div
@@ -109,14 +116,34 @@
               class="mdl-textfield__input"
               type="text"
               pattern="-?[0-9]*(\.[0-9]+)?"
-              id="num-c"
+              id="variable-multiply-1"
             />
-            <label class="mdl-textfield__label" for="num-c"
-              >Enter Value C (c)</label
+            <label class="mdl-textfield__label" for="variable-multiply-1"
+              >Enter Value 1</label
             >
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
         </form>
+        <form action="#">
+        <h4>×</h4>
+          <div
+            class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+          >
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="variable-multiply-2"
+            />
+            <label class="mdl-textfield__label" for="variable-multiply-2"
+              >Enter Value 2</label
+            >
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <hr>
+        <p></p>
+        <p>When both equations are complete, click the <b>calculate</b> button.</p>
         <!-- Raised button with ripple -->
         <button
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
@@ -126,20 +153,7 @@
         </button>
         <!-- basic text -->
         <p></p>
-        <table class="mdl-data-table mdl-js-data-table">
-          <thead>
-            <tr>
-              <th>"X" Values</th>
-              <th>"Y" Values</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><div id="x-values"></div></td>
-              <td><div id="y-values"></div></td>
-            </tr>
-          </tbody>
-        </table>
+        <div id="evaluate-equations"></div>
       </main>
     </div>
   </body>
