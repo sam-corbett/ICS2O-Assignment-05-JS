@@ -28,22 +28,22 @@ function myButtonClicked() {
     document.getElementById("variable-multiply-2").value
   )
 
-  var productAdd = numAdd1 + numAdd2
+  var productAdd = 0
   var productMulti = 0
   var counter = 0
 
-  document.getElementById("evaluate-equations").innerHTML =
-    "Both numbers add up to " + productAdd + "."
 
-  while (counter < Math.abs(numMulti2)) {
+ productAdd = Math.abs(numAdd1) + Math.abs(numAdd2)
+
+
+ while (counter < Math.abs(numMulti2)) {
     counter++
     productMulti = productMulti + Math.abs(numMulti1)
   }
-
-  if ((numMulti1 < 0 && numMulti2 > 0) || (numMulti2 < 0 && numMulti1 > 0))
-    document.getElementById("evaluate-equations").innerHTML =
-      "Both numbers multiply to -" + productMulti + "."
-  else
-    document.getElementById("evaluate-equations").innerHTML =
-      "Both numbers multiply to " + productMulti + "."
+  
+  if (productAdd == productMulti) {
+    document.getElementById("evaluate-equations").innerHTML = "The First Two Numbers add up to: " + productAdd + " </br> The Second Two Numbers multiply to: " + productMulti + "</br><b>Both equations are equal to each other! You've found a good match!</b>"
+  } else {
+    document.getElementById("evaluate-equations").innerHTML = "The First Two Numbers add up to: " + productAdd + " </br> The Second Two Numbers multiply to: " + productMulti + "</br> <b>Both equations don't equal each other! Please Try Again.</b>"
+  }
 }
