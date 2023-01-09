@@ -32,18 +32,26 @@ function myButtonClicked() {
   var productMulti = 0
   var counter = 0
 
+  productAdd = Math.abs(numAdd1) + Math.abs(numAdd2)
 
- productAdd = Math.abs(numAdd1) + Math.abs(numAdd2)
-
-
- while (counter < Math.abs(numMulti2)) {
+  while (counter < Math.abs(numMulti2)) {
     counter++
     productMulti = productMulti + Math.abs(numMulti1)
   }
-  
+
   if (productAdd == productMulti) {
-    document.getElementById("evaluate-equations").innerHTML = "The First Two Numbers add up to: " + productAdd + " </br> The Second Two Numbers multiply to: " + productMulti + "</br><b>Both equations are equal to each other! You've found a good match!</b>"
+    document.getElementById("evaluate-equations").innerHTML =
+      "The First Two Numbers add up to: " +
+      productAdd +
+      " </br> The Second Two Numbers multiply to: " +
+      productMulti +
+      "</br><b>Both equations are equal to each other! You've found a good match!</b>"
   } else {
-    document.getElementById("evaluate-equations").innerHTML = "The First Two Numbers add up to: " + productAdd + " </br> The Second Two Numbers multiply to: " + productMulti + "</br> <b>Both equations don't equal each other! Please Try Again.</b>"
+    document.getElementById("evaluate-equations").innerHTML =
+      "The First Two Numbers add up to: " +
+      productAdd +
+      " </br> The Second Two Numbers multiply to: " +
+      productMulti +
+      "</br> <b>Both equations don't equal each other! Please Try Again.</b>"
   }
 }
